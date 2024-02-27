@@ -79,7 +79,7 @@ public class jamm_form extends javax.swing.JFrame {
 
         lblCarrera.setText("Carrera*");
 
-        cboCarreras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingeniería en Sis. Computacionales", "Ingeniería Electrónica", "Ingeniería Civil", "Ingeniería Mecánica", "Ingeniería Industrial", "Ingeniería Química", "Ingeniería Electrica", "Ingeniería en Gestión Empresarial", "Licenciatura en Administración", "Contador Público" }));
+        cboCarreras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingienieria en Sis. Computacionales", "Ingienieria Electronica", "Ingienieria Civil", "Ingienieria Mecanica", "Ingienieria Industrial", "Ingienieria Quimica", "Ingienieria Electrica", "Ingienieria en Gestion Empresarial", "Licenciatura en Administracion", "Contador Publico" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -152,8 +152,18 @@ public class jamm_form extends javax.swing.JFrame {
         );
 
         btnMostrar.setText("Mostrar");
+        btnMostrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostrarActionPerformed(evt);
+            }
+        });
 
         btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarActionPerformed(evt);
+            }
+        });
 
         btnAceptar.setText("Aceptar");
         btnAceptar.addActionListener(new java.awt.event.ActionListener() {
@@ -227,6 +237,30 @@ public class jamm_form extends javax.swing.JFrame {
         rbtnMasculino.setSelected(true);
         cboCarreras.setSelectedIndex(0);
     }//GEN-LAST:event_btnAceptarActionPerformed
+
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
+        // TODO add your handling code here:
+        
+        // Limpiar los campos del formulario
+        txfNumControl.setText("");
+        txfNombre.setText("");
+        txfApellidoPaterno.setText("");
+        txfApellidoMaterno.setText("");
+        rbtnMasculino.setSelected(true);
+        cboCarreras.setSelectedIndex(0);
+    }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
+        // TODO add your handling code here:
+        if(listaAlumnos.isEmpty()){
+            System.out.println("Aun no hay alumnos guardados...");
+        }
+        else{
+            for(Alumno a : listaAlumnos){
+                System.out.println(a.toString());
+            }
+        }
+    }//GEN-LAST:event_btnMostrarActionPerformed
 
     /**
      * @param args the command line arguments
