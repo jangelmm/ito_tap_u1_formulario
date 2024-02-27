@@ -223,14 +223,14 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="10">
-                <StringItem index="0" value="Ingienieria en Sis. Computacionales"/>
-                <StringItem index="1" value="Ingienieria Electronica"/>
-                <StringItem index="2" value="Ingienieria Civil"/>
-                <StringItem index="3" value="Ingienieria Mecanica"/>
-                <StringItem index="4" value="Ingienieria Industrial"/>
-                <StringItem index="5" value="Ingienieria Quimica"/>
-                <StringItem index="6" value="Ingienieria Electrica"/>
-                <StringItem index="7" value="Ingienieria en Gestion Empresarial"/>
+                <StringItem index="0" value="Ingenieria en Sis. Computacionales"/>
+                <StringItem index="1" value="Ingenieria Electronica"/>
+                <StringItem index="2" value="Ingenieria Civil"/>
+                <StringItem index="3" value="Ingenieria Mecanica"/>
+                <StringItem index="4" value="Ingenieria Industrial"/>
+                <StringItem index="5" value="Ingenieria Quimica"/>
+                <StringItem index="6" value="Ingenieria Electrica"/>
+                <StringItem index="7" value="Ingenieria en Gestion Empresarial"/>
                 <StringItem index="8" value="Licenciatura en Administracion"/>
                 <StringItem index="9" value="Contador Publico"/>
               </StringArray>

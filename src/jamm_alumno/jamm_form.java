@@ -79,7 +79,7 @@ public class jamm_form extends javax.swing.JFrame {
 
         lblCarrera.setText("Carrera*");
 
-        cboCarreras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingienieria en Sis. Computacionales", "Ingienieria Electronica", "Ingienieria Civil", "Ingienieria Mecanica", "Ingienieria Industrial", "Ingienieria Quimica", "Ingienieria Electrica", "Ingienieria en Gestion Empresarial", "Licenciatura en Administracion", "Contador Publico" }));
+        cboCarreras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingenieria en Sis. Computacionales", "Ingenieria Electronica", "Ingenieria Civil", "Ingenieria Mecanica", "Ingenieria Industrial", "Ingenieria Quimica", "Ingenieria Electrica", "Ingenieria en Gestion Empresarial", "Licenciatura en Administracion", "Contador Publico" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

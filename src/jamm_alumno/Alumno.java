@@ -68,6 +68,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return "Alumno{" + "numero_Control=" + numero_Control + ", nombre=" + nombre + ", apellido_Paterno=" + apellido_Paterno + ", apellido_Materno=" + apellido_Materno + ", genero=" + genero + ", carrera=" + carrera + '}';
+        return String.format("Numero_Control: %-10s | Nombre: %-15s | Apellido_Paterno: %-10s | Apellido_Materno: %-10s | Genero: %-1s | Carrera: %-40s",
+            numero_Control, nombre, apellido_Paterno, apellido_Materno, genero, carrera);
     }
 }
