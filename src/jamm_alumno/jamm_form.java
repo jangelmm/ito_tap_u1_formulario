@@ -4,18 +4,26 @@
  */
 package jamm_alumno;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
  */
 public class jamm_form extends javax.swing.JFrame {
-
+    //Atributo de Lista
+    private ArrayList<Alumno> listaAlumnos;
+    
     /**
      * Creates new form jamm_form
      */
     public jamm_form() {
         initComponents();
         rbtnMasculino.setSelected(true);
+        
+        //Inicializar ArrayList
+        listaAlumnos = new ArrayList<>();
     }
 
     /**
@@ -188,6 +196,36 @@ public class jamm_form extends javax.swing.JFrame {
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         // TODO add your handling code here:
+        //Obtenemos los datos
+        String numero_Control = txfNumControl.getText();
+        String nombre = txfNombre.getText();
+        String apellido_Paterno = txfApellidoPaterno.getText();
+        String apellido_Materno = txfApellidoMaterno.getText();
+        char genero = rbtnMasculino.isSelected() ? 'M' : 'F';
+        String carrera = cboCarreras.getSelectedItem().toString();
+        
+        // Validamos que todos los campos estén completos
+        if (numero_Control.isEmpty() || nombre.isEmpty() || apellido_Paterno.isEmpty() || apellido_Materno.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos obligatorios.", "Datos incompletos", JOptionPane.WARNING_MESSAGE);
+            return; // Detenemos la ejecución del método si faltan datos
+        }
+        
+        //Creamos un objeto
+        Alumno a = new Alumno(numero_Control, nombre, apellido_Paterno, apellido_Materno, genero, carrera);
+        
+        //Guardar el Objeto
+        listaAlumnos.add(a);
+        
+        // Mostrar mensaje de éxito
+        JOptionPane.showMessageDialog(this, "Datos guardados con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        
+        // Limpiar los campos del formulario
+        txfNumControl.setText("");
+        txfNombre.setText("");
+        txfApellidoPaterno.setText("");
+        txfApellidoMaterno.setText("");
+        rbtnMasculino.setSelected(true);
+        cboCarreras.setSelectedIndex(0);
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     /**
