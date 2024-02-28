@@ -207,6 +207,7 @@ public class jamm_form extends javax.swing.JFrame {
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         // TODO add your handling code here:
         //Obtenemos los datos
+  
         String numero_Control = txfNumControl.getText();
         String nombre = txfNombre.getText();
         String apellido_Paterno = txfApellidoPaterno.getText();
@@ -214,14 +215,23 @@ public class jamm_form extends javax.swing.JFrame {
         char genero = rbtnMasculino.isSelected() ? 'M' : 'F';
         String carrera = cboCarreras.getSelectedItem().toString();
         
-        // Validamos que todos los campos estén completos
-        if (numero_Control.isEmpty() || nombre.isEmpty() || apellido_Paterno.isEmpty() || apellido_Materno.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos obligatorios.", "Datos incompletos", JOptionPane.WARNING_MESSAGE);
+        
+        if (numero_Control.isEmpty() || numero_Control.length() != 8 || nombre.isEmpty() || apellido_Paterno.isEmpty() || apellido_Materno.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos de forma correcta\n- Llene los campos\n- Recuerde que el N. Control es de 8 Digitos.", "Datos incompletos", JOptionPane.WARNING_MESSAGE);
             return; // Detenemos la ejecución del método si faltan datos
         }
         
         //Creamos un objeto
-        Alumno a = new Alumno(numero_Control, nombre, apellido_Paterno, apellido_Materno, genero, carrera);
+        
+        Alumno a;
+        try{
+            a = new Alumno(Integer.parseInt(numero_Control), nombre, apellido_Paterno, apellido_Materno, genero, carrera);
+        }
+        catch (Exception e){
+            JOptionPane.showMessageDialog(this, "Por favor, ingrese datos correctos (error N. Control).", "Dato erroneo", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
         
         //Guardar el Objeto
         listaAlumnos.add(a);

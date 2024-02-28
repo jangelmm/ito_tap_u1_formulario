@@ -2,14 +2,14 @@ package jamm_alumno;
 
 public class Alumno {
     //Atributos
-    String numero_Control;
+    int numero_Control;
     String nombre;
     String apellido_Paterno;
     String apellido_Materno;
     char genero;
     String carrera;
 
-    public Alumno(String numero_Control, String nombre, String apellido_Paterno, String apellido_Materno, char genero, String carrera) {
+    public Alumno(int numero_Control, String nombre, String apellido_Paterno, String apellido_Materno, char genero, String carrera) {
         this.numero_Control = numero_Control;
         this.nombre = nombre;
         this.apellido_Paterno = apellido_Paterno;
@@ -18,11 +18,11 @@ public class Alumno {
         this.carrera = carrera;
     }
 
-    public String getNumero_Control() {
+    public int getNumero_Control() {
         return numero_Control;
     }
 
-    public void setNumero_Control(String numero_Control) {
+    public void setNumero_Control(int numero_Control) {
         this.numero_Control = numero_Control;
     }
 
