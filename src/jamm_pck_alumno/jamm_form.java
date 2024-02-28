@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package jamm_alumno;
+package jamm_pck_alumno;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -20,7 +20,7 @@ public class jamm_form extends javax.swing.JFrame {
      */
     public jamm_form() {
         initComponents();
-        rbtnMasculino.setSelected(true);
+        optMasculino.setSelected(true);
         
         //Inicializar ArrayList
         listaAlumnos = new ArrayList<>();
@@ -39,16 +39,16 @@ public class jamm_form extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         lblEncabezado = new javax.swing.JLabel();
         lblNumControl = new javax.swing.JLabel();
-        txfNumControl = new javax.swing.JTextField();
+        txtNumControl = new javax.swing.JTextField();
         lblNombre = new javax.swing.JLabel();
-        txfNombre = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
         lblApellidoPaternp = new javax.swing.JLabel();
-        txfApellidoPaterno = new javax.swing.JTextField();
+        txtPaterno = new javax.swing.JTextField();
         lblApellidoMaterno = new javax.swing.JLabel();
-        txfApellidoMaterno = new javax.swing.JTextField();
+        txtMaterno = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        rbtnMasculino = new javax.swing.JRadioButton();
-        rbtnFemenino = new javax.swing.JRadioButton();
+        optMasculino = new javax.swing.JRadioButton();
+        optFemenino = new javax.swing.JRadioButton();
         lblCarrera = new javax.swing.JLabel();
         cboCarreras = new javax.swing.JComboBox<>();
         btnMostrar = new javax.swing.JButton();
@@ -71,11 +71,11 @@ public class jamm_form extends javax.swing.JFrame {
 
         jLabel1.setText("Genero*");
 
-        grupoGeneros.add(rbtnMasculino);
-        rbtnMasculino.setText("Masculino");
+        grupoGeneros.add(optMasculino);
+        optMasculino.setText("Masculino");
 
-        grupoGeneros.add(rbtnFemenino);
-        rbtnFemenino.setText("Femenino");
+        grupoGeneros.add(optFemenino);
+        optFemenino.setText("Femenino");
 
         lblCarrera.setText("Carrera*");
 
@@ -92,12 +92,12 @@ public class jamm_form extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblNumControl, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txfNumControl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNumControl, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(txfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(39, 39, 39))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(lblNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -111,13 +111,13 @@ public class jamm_form extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(lblApellidoPaternp, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txfApellidoPaterno)
-                                    .addComponent(rbtnMasculino, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
+                                    .addComponent(txtPaterno)
+                                    .addComponent(optMasculino, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
                                 .addGap(40, 40, 40)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(lblApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txfApellidoMaterno)
-                                    .addComponent(rbtnFemenino, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)))
+                                    .addComponent(txtMaterno)
+                                    .addComponent(optFemenino, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)))
                             .addComponent(cboCarreras, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
@@ -128,7 +128,7 @@ public class jamm_form extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(lblNumControl)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txfNumControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtNumControl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNombre)
@@ -136,14 +136,14 @@ public class jamm_form extends javax.swing.JFrame {
                     .addComponent(lblApellidoMaterno))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txfApellidoPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txfApellidoMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMaterno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(rbtnMasculino)
-                    .addComponent(rbtnFemenino))
+                    .addComponent(optMasculino)
+                    .addComponent(optFemenino))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCarrera)
@@ -208,11 +208,11 @@ public class jamm_form extends javax.swing.JFrame {
         // TODO add your handling code here:
         //Obtenemos los datos
   
-        String numero_Control = txfNumControl.getText();
-        String nombre = txfNombre.getText();
-        String apellido_Paterno = txfApellidoPaterno.getText();
-        String apellido_Materno = txfApellidoMaterno.getText();
-        char genero = rbtnMasculino.isSelected() ? 'M' : 'F';
+        String numero_Control = txtNumControl.getText();
+        String nombre = txtNombre.getText();
+        String apellido_Paterno = txtPaterno.getText();
+        String apellido_Materno = txtMaterno.getText();
+        char genero = optMasculino.isSelected() ? 'M' : 'F';
         String carrera = cboCarreras.getSelectedItem().toString();
         
         
@@ -237,14 +237,14 @@ public class jamm_form extends javax.swing.JFrame {
         listaAlumnos.add(a);
         
         // Mostrar mensaje de éxito
-        JOptionPane.showMessageDialog(this, "Datos guardados con éxito.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Alumno guardado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
         
         // Limpiar los campos del formulario
-        txfNumControl.setText("");
-        txfNombre.setText("");
-        txfApellidoPaterno.setText("");
-        txfApellidoMaterno.setText("");
-        rbtnMasculino.setSelected(true);
+        txtNumControl.setText("");
+        txtNombre.setText("");
+        txtPaterno.setText("");
+        txtMaterno.setText("");
+        optMasculino.setSelected(true);
         cboCarreras.setSelectedIndex(0);
     }//GEN-LAST:event_btnAceptarActionPerformed
 
@@ -252,18 +252,18 @@ public class jamm_form extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         // Limpiar los campos del formulario
-        txfNumControl.setText("");
-        txfNombre.setText("");
-        txfApellidoPaterno.setText("");
-        txfApellidoMaterno.setText("");
-        rbtnMasculino.setSelected(true);
+        txtNumControl.setText("");
+        txtNombre.setText("");
+        txtPaterno.setText("");
+        txtMaterno.setText("");
+        optMasculino.setSelected(true);
         cboCarreras.setSelectedIndex(0);
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
         // TODO add your handling code here:
         if(listaAlumnos.isEmpty()){
-            System.out.println("Aun no hay alumnos guardados...");
+            System.out.println("No se encontraron alumnos registrados...");
         }
         else{
             for(Alumno a : listaAlumnos){
@@ -321,11 +321,11 @@ public class jamm_form extends javax.swing.JFrame {
     private javax.swing.JLabel lblEncabezado;
     private javax.swing.JLabel lblNombre;
     private javax.swing.JLabel lblNumControl;
-    private javax.swing.JRadioButton rbtnFemenino;
-    private javax.swing.JRadioButton rbtnMasculino;
-    private javax.swing.JTextField txfApellidoMaterno;
-    private javax.swing.JTextField txfApellidoPaterno;
-    private javax.swing.JTextField txfNombre;
-    private javax.swing.JTextField txfNumControl;
+    private javax.swing.JRadioButton optFemenino;
+    private javax.swing.JRadioButton optMasculino;
+    private javax.swing.JTextField txtMaterno;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNumControl;
+    private javax.swing.JTextField txtPaterno;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,4 +1,4 @@
-package jamm_alumno;
+package jamm_pck_alumno;
 
 public class Alumno {
     //Atributos
@@ -68,7 +68,8 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return String.format("Numero_Control: %-10s | Nombre: %-15s | Apellido_Paterno: %-10s | Apellido_Materno: %-10s | Genero: %-1s | Carrera: %-40s",
-            numero_Control, nombre, apellido_Paterno, apellido_Materno, genero, carrera);
+        String generoString = (genero == 'M') ? "Masculino" : (genero == 'F') ? "Femenino" : "Desconocido";
+        return String.format("Numero_Control: %-10s | Nombre: %-15s | Apellido_Paterno: %-10s | Apellido_Materno: %-10s | Genero: %-10s | Carrera: %-40s",
+                numero_Control, nombre, apellido_Paterno, apellido_Materno, generoString, carrera);
     }
 }

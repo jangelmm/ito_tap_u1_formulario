@@ -80,12 +80,12 @@
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="lblNumControl" min="-2" pref="81" max="-2" attributes="0"/>
-                      <Component id="txfNumControl" min="-2" pref="95" max="-2" attributes="0"/>
+                      <Component id="txtNumControl" min="-2" pref="95" max="-2" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="txfNombre" min="-2" pref="140" max="-2" attributes="0"/>
+                                      <Component id="txtNombre" min="-2" pref="140" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
@@ -105,14 +105,14 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="lblApellidoPaternp" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="txfApellidoPaterno" max="32767" attributes="0"/>
-                                      <Component id="rbtnMasculino" pref="140" max="32767" attributes="0"/>
+                                      <Component id="txtPaterno" max="32767" attributes="0"/>
+                                      <Component id="optMasculino" pref="140" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="lblApellidoMaterno" min="-2" pref="110" max="-2" attributes="0"/>
-                                      <Component id="txfApellidoMaterno" max="32767" attributes="0"/>
-                                      <Component id="rbtnFemenino" alignment="0" pref="140" max="32767" attributes="0"/>
+                                      <Component id="txtMaterno" max="32767" attributes="0"/>
+                                      <Component id="optFemenino" alignment="0" pref="140" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Component id="cboCarreras" max="32767" attributes="0"/>
@@ -130,7 +130,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="lblNumControl" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="txfNumControl" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNumControl" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="lblNombre" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -139,15 +139,15 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txfNombre" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txfApellidoPaterno" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txfApellidoMaterno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtNombre" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtPaterno" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtMaterno" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbtnMasculino" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="rbtnFemenino" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="optMasculino" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="optFemenino" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -170,35 +170,35 @@
             <Property name="text" type="java.lang.String" value="Num. Control*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfNumControl">
+        <Component class="javax.swing.JTextField" name="txtNumControl">
         </Component>
         <Component class="javax.swing.JLabel" name="lblNombre">
           <Properties>
             <Property name="text" type="java.lang.String" value="Nombre(s)*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfNombre">
+        <Component class="javax.swing.JTextField" name="txtNombre">
         </Component>
         <Component class="javax.swing.JLabel" name="lblApellidoPaternp">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido Paterno*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfApellidoPaterno">
+        <Component class="javax.swing.JTextField" name="txtPaterno">
         </Component>
         <Component class="javax.swing.JLabel" name="lblApellidoMaterno">
           <Properties>
             <Property name="text" type="java.lang.String" value="Apellido Materno*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txfApellidoMaterno">
+        <Component class="javax.swing.JTextField" name="txtMaterno">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Genero*"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbtnMasculino">
+        <Component class="javax.swing.JRadioButton" name="optMasculino">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="grupoGeneros"/>
@@ -206,7 +206,7 @@
             <Property name="text" type="java.lang.String" value="Masculino"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JRadioButton" name="rbtnFemenino">
+        <Component class="javax.swing.JRadioButton" name="optFemenino">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="grupoGeneros"/>
